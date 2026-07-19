@@ -1,0 +1,12 @@
+# notebooklm 스킬은 install 스크립트로 clone 하며 저장소에 vendoring 하지 않는다.
+.claude/skills/notebooklm/
+
+# 스킬이 만드는 로컬 데이터/가상환경/브라우저 상태 (혹시 다른 위치에 설치되어도 대비)
+**/.venv/
+**/data/library.json
+**/data/auth_info.json
+**/data/browser_state/
+
+# OS/에디터
+.DS_Store
+*.log

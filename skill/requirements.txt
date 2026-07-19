@@ -1,0 +1,5 @@
+# Chromium is pre-provisioned in the target environment; only the driver is
+# installed here. run.py sets PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1 so no browser
+# is fetched. Override the version with NBLM_PLAYWRIGHT_VERSION if the pinned
+# driver does not match the local Chromium build.
+playwright>=1.44

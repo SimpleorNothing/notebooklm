@@ -1,0 +1,6 @@
+# Installed skill copy (if someone installs into this repo) and runtime state.
+.claude/
+**/.venv/
+**/.auth/
+__pycache__/
+*.pyc

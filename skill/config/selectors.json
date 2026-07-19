@@ -1,0 +1,37 @@
+{
+  "_comment": "Tunable NotebookLM DOM selectors. NotebookLM's UI changes without notice; if list/ask break, update the arrays below (first visible match wins). Delete this file to fall back to the built-in defaults in scripts/_browser.py.",
+  "logged_in_marker": [
+    "text=Create new",
+    "text=New notebook",
+    "text=새 노트북",
+    "[aria-label*='notebook' i]"
+  ],
+  "login_marker": [
+    "input[type='email']",
+    "text=Sign in",
+    "text=로그인"
+  ],
+  "notebook_card": [
+    "a[href*='/notebook/']",
+    "[role='listitem']",
+    "[data-test-id*='notebook']"
+  ],
+  "chat_input": [
+    "textarea",
+    "[contenteditable='true']",
+    "[role='textbox']",
+    "[aria-label*='Ask' i]",
+    "[placeholder*='Ask' i]"
+  ],
+  "send_button": [
+    "button[aria-label*='Send' i]",
+    "button[aria-label*='Submit' i]",
+    "button[type='submit']"
+  ],
+  "response_block": [
+    "[data-test-id*='response']",
+    "[class*='response']",
+    "[class*='message']",
+    "chat-message"
+  ]
+}

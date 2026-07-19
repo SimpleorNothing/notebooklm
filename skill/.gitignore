@@ -1,0 +1,5 @@
+# Local runtime state — never commit.
+.venv/
+.auth/
+__pycache__/
+*.pyc

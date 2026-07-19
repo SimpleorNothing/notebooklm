@@ -30,11 +30,36 @@ docs/USAGE.md                          명령 레퍼런스·상세 사용법
 
 ## 설치
 
-1) 이 저장소를 clone한 위치에서(또는 프로젝트에 서브모듈/복사로 포함시킨 뒤) 스킬을 설치:
+> **사전 준비**: Git, Python 3.10+, 그리고 로컬 [Claude Code](https://claude.com/claude-code).
+> Windows는 [Git for Windows](https://git-scm.com/download/win)가 필요하다.
+
+0) 먼저 이 저장소를 로컬에 clone한다(시스템 폴더가 아닌 작업 폴더에서):
 
 ```bash
+# macOS / Linux
+cd ~/projects
+git clone https://github.com/SimpleorNothing/notebooklm.git
+cd notebooklm
+```
+```powershell
+# Windows PowerShell — C:\WINDOWS\system32 같은 곳이 아니라 개인 작업 폴더에서
+cd $HOME\Documents
+git clone https://github.com/SimpleorNothing/notebooklm.git
+cd notebooklm
+```
+
+1) 스킬을 설치한다:
+
+```bash
+# macOS / Linux
 bash scripts/install-notebooklm-skill.sh
 # 전역(~/.claude/skills)에 설치하려면:  TARGET=global bash scripts/install-notebooklm-skill.sh
+```
+```powershell
+# Windows PowerShell
+powershell -ExecutionPolicy Bypass -File scripts\install-notebooklm-skill.ps1
+# 전역(%USERPROFILE%\.claude\skills)에 설치하려면:
+#   $env:TARGET="global"; powershell -ExecutionPolicy Bypass -File scripts\install-notebooklm-skill.ps1
 ```
 
 2) 에이전트를 사용할 프로젝트의 `.claude/agents/`에 `notebooklm-manager.md`가 인식되도록
@@ -43,9 +68,18 @@ bash scripts/install-notebooklm-skill.sh
 3) 최초 1회 인증:
 
 ```bash
+# macOS / Linux
 cd .claude/skills/notebooklm   # 또는 ~/.claude/skills/notebooklm
 python scripts/run.py auth_manager.py status
 ```
+```powershell
+# Windows PowerShell
+cd .claude\skills\notebooklm
+python scripts\run.py auth_manager.py status
+```
+
+4) 이 `notebooklm` 폴더에서 로컬 Claude Code를 실행하면 `.claude/agents/`의
+   `notebooklm-manager` 에이전트가 자동 인식된다. 이후 자연어로 요청하면 된다.
 
 ## 사용 예 (자연어)
 

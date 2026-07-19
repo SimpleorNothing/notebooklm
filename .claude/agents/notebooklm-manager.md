@@ -38,7 +38,12 @@ tools: Bash, Read, Write, Glob, Grep, Skill
 없으면 이 저장소의 부트스트랩 스크립트로 설치한다:
 
 ```bash
+# macOS / Linux
 bash scripts/install-notebooklm-skill.sh
+```
+```powershell
+# Windows PowerShell (저장소 폴더 안에서)
+powershell -ExecutionPolicy Bypass -File scripts\install-notebooklm-skill.ps1
 ```
 
 이 스크립트는 upstream 스킬(https://github.com/PleasePrompto/notebooklm-skill)을

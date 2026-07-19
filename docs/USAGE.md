@@ -9,6 +9,10 @@
 cd <SKILL_DIR>
 ```
 
+> **Windows PowerShell**: 경로 구분자만 `\`로 바꾸면 동일하다.
+> 예) `cd .claude\skills\notebooklm` 후 `python scripts\run.py auth_manager.py status`.
+> 스킬 설치는 `powershell -ExecutionPolicy Bypass -File scripts\install-notebooklm-skill.ps1`.
+
 ## 1. 인증 — `auth_manager.py`
 
 ```bash
